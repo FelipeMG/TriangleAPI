@@ -1,13 +1,13 @@
 
 public class Triangle {
 	
-	private Integer sideA;
-	private Integer sideB;
-	private Integer sideC;
+	private Magnitude sideA;
+	private Magnitude sideB;
+	private Magnitude sideC;
 	
-	private Double angleA;
-	private Double angleB;
-	private Double angleC;
+	private Angle angleA;
+	private Angle angleB;
+	private Angle angleC;
 	
 	private Triangle(Builder builder){
 		this.sideA = builder.sideA;
@@ -19,34 +19,34 @@ public class Triangle {
 	}
 	
 	public static class Builder{
-		private Integer sideA;
-		private Integer sideB;
-		private Integer sideC;
-		private Double angleA;
-		private Double angleB;
-		private Double angleC;
+		private Magnitude sideA;
+		private Magnitude sideB;
+		private Magnitude sideC;
+		private Angle angleA;
+		private Angle angleB;
+		private Angle angleC;
 		
-		public Builder sideA(Integer sideA){
+		public Builder sideA(Magnitude sideA){
 			this.sideA = sideA;
 			return this;
 		}
-		public Builder sideB(Integer sideB){
+		public Builder sideB(Magnitude sideB){
 			this.sideB = sideB;
 			return this;
 		}
-		public Builder sideC(Integer sideC){
+		public Builder sideC(Magnitude sideC){
 			this.sideC = sideC;
 			return this;
 		}
-		public Builder angleA(Double angleA){
+		public Builder angleA(Angle angleA){
 			this.angleA = angleA;
 			return this;
 		}
-		public Builder angleB(Double angleB){
+		public Builder angleB(Angle angleB){
 			this.angleB = angleB;
 			return this;
 		}
-		public Builder angleC(Double angleC){
+		public Builder angleC(Angle angleC){
 			this.angleC = angleC;
 			return this;
 		}
