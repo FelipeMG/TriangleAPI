@@ -1,7 +1,7 @@
 
 public class Magnitude {
 	
-	public double measure;
+	private double measure;
 
 	public Magnitude(double measure){
 		if(measure > 0.0){

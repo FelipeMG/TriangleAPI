@@ -51,9 +51,37 @@ public class Triangle {
 			return this;
 		}
 		public Triangle build(){
-			return new Triangle(this);
+			//TODO: complete triangle if needed, using sine and cosine rules
+			if(sideValidation() && angleValidation()){
+				return new Triangle(this);
+			}
+			else{
+				throw new IllegalStateException("Triangle can't be built");
+			}
 		}
-		//TODO: Implement validations and sine and cosine rules
+		
+		private boolean sideValidation(){
+			double lengthA = this.sideA.getMeasure();
+			double lengthB = this.sideB.getMeasure();
+			double lengthC = this.sideC.getMeasure();			
+			boolean greaterThanSideA = (lengthA + lengthB) > lengthC;
+			boolean greaterThanSideB = (lengthA + lengthB) > lengthC;
+			boolean greaterThanSideC = (lengthA + lengthB) > lengthC;
+			
+			return greaterThanSideA && greaterThanSideB && greaterThanSideC;
+		}
+		
+		private boolean angleValidation(){
+			double lengthA = this.sideA.getMeasure();
+			double lengthB = this.sideB.getMeasure();
+			double lengthC = this.sideC.getMeasure();
+			boolean greaterThanSideA = (lengthA + lengthB) > lengthC;
+			boolean greaterThanSideB = (lengthA + lengthB) > lengthC;
+			boolean greaterThanSideC = (lengthA + lengthB) > lengthC;
+			
+			return greaterThanSideA && greaterThanSideB && greaterThanSideC;
+		}
+		//TODO:sine and cosine rules
 	}
 	
 }
